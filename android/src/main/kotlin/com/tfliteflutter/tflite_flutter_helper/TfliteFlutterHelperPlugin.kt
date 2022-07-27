@@ -151,6 +151,9 @@ class TfliteFlutterHelperPlugin : FlutterPlugin,
 				completeInitializeRecorder()
 				return true
 			}
+		}
+		return false
+	}
 
 	private fun initializeRecorder(@NonNull call: MethodCall, @NonNull result: Result) {
 		mRecordSampleRate = call.argument<Int>("sampleRate") ?: mRecordSampleRate
